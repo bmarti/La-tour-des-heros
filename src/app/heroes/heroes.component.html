@@ -1,1 +1,10 @@
-{{ hero.nom }}
+<h2>Détails du héros: <span class="elt-important">{{ hero.nom | uppercase }}</span></h2>
+
+<div><span class="identity-cat">id: </span><span class="identity-det">{{ hero.id }}</span></div>
+<div><span class="identity-cat">nom: </span><span class="identity-det">{{ hero.nom }}</span></div>
+
+<div>
+    <label>
+        <input [(ngModel)]="hero.nom" placeholder="nom du héros"/>
+    </label>
+</div>
