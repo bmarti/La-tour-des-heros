@@ -1,18 +1,24 @@
 <h2>Liste des héros disponibles:</h2>
 
 <ul>
-    <li *ngFor="let hero of heroes">
+    <li *ngFor="let hero of heroes" (click)="onSelect(hero)">
         {{ hero.id }} {{ hero.nom }}
     </li>
 </ul>
 
-<h2>Détails du héros: <span class="elt-important">{{ hero.nom | uppercase }}</span></h2>
+<div *ngIf="selectedHero">
+    <h2>Détails du héros: <span class="elt-important">{{ selectedHero.nom | uppercase }}</span></h2>
+    <div>
+        <span class="identity-cat">id: </span><span class="identity-det">{{ selectedHero.id }}</span>
+    </div>
+    <div>
+        <span class="identity-cat">nom: </span><span class="identity-det">{{ selectedHero.nom }}</span>
+    </div>
 
-<div><span class="identity-cat">id: </span><span class="identity-det">{{ hero.id }}</span></div>
-<div><span class="identity-cat">nom: </span><span class="identity-det">{{ hero.nom }}</span></div>
-
-<div>
-    <label>
-        <input [(ngModel)]="hero.nom" placeholder="nom du héros"/>
-    </label>
+    <div>
+        <!-- Champs de modification -->
+        <label>Nom du héros:
+            <input [(ngModel)]="selectedHero.nom" placeholder="nom du héros"/>
+        </label>
+    </div>
 </div>
