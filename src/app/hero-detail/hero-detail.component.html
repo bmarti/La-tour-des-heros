@@ -1,0 +1,16 @@
+<div *ngIf="hero">
+    <h2>Détails du héros sélectionné : <span class="elt-important">{{ hero.nom | uppercase }}</span></h2>
+    <div>
+        <span class="identity-cat">id: </span><span class="identity-det">{{ hero.id }}</span>
+    </div>
+    <div>
+        <span class="identity-cat">nom: </span><span class="identity-det">{{ hero.nom }}</span>
+    </div>
+
+    <div>
+        <!-- Champs de modification -->
+        <label>Nom du héros:
+            <input [(ngModel)]="hero.nom" placeholder="nom du héros"/>
+        </label>
+    </div>
+</div>
