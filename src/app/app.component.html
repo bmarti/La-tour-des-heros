@@ -1,3 +1,23 @@
+<script type="text/javascript">
+function computeLastModifiedDate() {
+    mois = new Array("janvier", "février", "mars",
+				"avril", "mai", "juin", "juillet",
+				"août", "septembre", "octobre",
+				"novembre", "décembre");
+    var maj = new Date(document.lastModified);
+    document.getElementById("date").innerHTML = "Date de dernière mise à jour de la page :<strong> " +
+			   maj.getDate() + " " +
+			   mois[maj.getMonth()] + " " +
+               maj.getFullYear() + "</strong>";
+}
+</script>
+
 <h1>{{ title }}</h1>
 
-<app-heroes></app-heroes>
+<body onload="computeLastModifiedDate()">
+    <div style="display:block;">
+        <p style="text-align: right;"><span id="date"></span></p>
+    </div>
+
+    <app-heroes></app-heroes>
+</body>
