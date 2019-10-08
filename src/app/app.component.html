@@ -3,10 +3,15 @@
 </script>
 
 <h1>{{ title }}</h1>
-
+<nav>
+<ul>
+    <li><a class="nav-bar" routerLink="/">Accueil</a></li>
+    <li><a class="nav-bar" routerLink="/heroes">Heroes</a></li>
+</ul>
+</nav>
 <body>
         <p id="date" style="text-align: right;">{{ computeLastModifiedDate() }}</p>
 
-    <app-heroes></app-heroes>
+    <router-outlet></router-outlet>
     <app-messages></app-messages>
 </body>
