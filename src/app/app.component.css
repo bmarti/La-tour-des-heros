@@ -1,22 +1,29 @@
 ul {
+    display:inline-block;
     list-style-type: none;
     padding: 0;
     margin: 0;
-    border-radius: 4px 4px 4px 4px;
     background-color: rgb(29, 143, 0);
+    border-radius: 4px 4px 4px 4px;
+    height: 2em;
 }
 
 li {
     float: left;
     background-color: rgb(29, 143, 0);
+    border-radius: 4px 4px 4px 4px;
 }
 
 a.nav-bar {
     display: inline-block;
     margin: 0 0.5em 0 0.5em;
     color: #ffffff;
+    padding:0.4em;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-a.nav-bar:hover {
+a.nav-bar:hover, a.nav-bar:active {
     color: rgb(108, 255, 71);
 }
