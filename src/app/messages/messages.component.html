@@ -1,8 +1,10 @@
-<div *ngIf='messageService.messages.length'>
-
-    <h2>Messages</h2>
-    <button class="clear"
-        (click)="messageService.vider()">clear</button>
+<h2>Messages</h2>
+<div class="box-vidage">
+    <button id="btn-clean" (click)="messageService.vider()" [disabled]="messageService.impossible==true" >Effacer</button>
+</div>
+<div *ngIf='messageService.messages.length == 0'>
+        Il n'y a aucun message.
+</div>
+<div *ngIf="messageService || messageService.messages.length">
     <div *ngFor='let message of messageService.messages'>{{ message }}</div>
-
 </div>

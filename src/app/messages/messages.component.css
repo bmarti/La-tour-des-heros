@@ -1,0 +1,7 @@
+.box-vidage {
+    margin-bottom: 2em;
+}
+
+#btn-clean:disabled {
+    color:rgb(172, 172, 172);
+}
