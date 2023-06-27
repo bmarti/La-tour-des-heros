@@ -120,8 +120,8 @@
           }
         }
       }
-    }},
-  "defaultProject": "la-tour-des-heros",
+    }
+  },
   "cli": {
     "analytics": false
   }
